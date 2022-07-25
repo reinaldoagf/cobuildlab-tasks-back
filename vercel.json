@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "cobuildlab-tasks-server",
+  "alias": ["cobuildlab-tasks-api"],
+  "builds": [{ "src": "node ./src/bin/www", "use": "@now/node" }],
+  "routes": [{
+    "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+    },
+    "src": "/.*", "dest": "/" }
+  ]
+}
